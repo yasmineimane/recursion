@@ -1,0 +1,26 @@
+#include <stdio.h>
+int decimaltobinary(int);
+int read_nbr();
+void print_result(int);
+
+int main()
+{
+	int input = read_nbr();
+	int output = decimaltobinary(input);
+	print_result(output);
+	return 0;
+}
+int read_nbr(int n){
+	printf("please enter a number :");
+	scanf("%d",&n);
+	return n;}
+	
+int decimaltobinary(int x){
+	if(x == 0)
+	  return 0;
+	else 
+	  return x % 2 + decimaltobinary(x / 2)*10;
+	}
+	
+void print_result(int y){
+	printf("%d",y);}
