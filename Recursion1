@@ -1,0 +1,27 @@
+#include <stdio.h>
+int sum (int);
+int read_nbr();
+void print_result(int);
+int main()
+{
+	int input = read_nbr();
+	int output = sum(input);
+	print_result(output);
+	return 0;
+}
+
+int read_nbr(int num){
+	printf("please enter a number :");
+	scanf("%d",&num);
+	return num;}
+	
+int sum(int n){
+	if(n == 0)
+	   return 0;
+	else 
+	   return n + sum(n - 1);;
+	}
+	
+void print_result(int x){
+	printf("%d",x);
+	}
