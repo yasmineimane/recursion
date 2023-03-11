@@ -1,0 +1,27 @@
+#include <stdio.h>
+int read_nbr();
+int fact(int);
+void print_result(int);
+int main()
+{
+	int input = read_nbr();
+	int output = fact(input);
+	print_result(output);
+	return 0;
+}
+
+int read_nbr(int number){
+	printf("please enter a number :");
+	scanf("%d",&number);
+	return number;
+	}
+	
+int fact(int n){
+	if(n == 0)
+	   return 1;
+	else 
+	   return n * fact(n - 1);
+	}
+	
+void print_result(int x){
+	printf("%d",x);}
