@@ -1,0 +1,27 @@
+#include <stdio.h>
+int read_nbr();
+int power(int ,int);
+void print_result(int);
+
+int main()
+{
+	int input_1 = read_nbr();
+	int input_2 = read_nbr();
+	int output = power(input_1, input_2);
+	print_result(output);
+	return 0;
+}
+
+int read_nbr(int num){
+	printf("please enter a number :");
+	scanf("%d",&num);
+	return num;}
+	
+int power(int a,int b){
+	if(b == 0)
+	  return 1;
+	else 
+	  return a * power(a, b - 1);}
+	  
+void print_result(int x){
+	printf("%d",x);}
