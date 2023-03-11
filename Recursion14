@@ -1,0 +1,30 @@
+#include <stdio.h>
+int read_nbr();
+int fibonacci(int);
+void print_result(int);
+int main()
+{
+	int input = read_nbr();
+	print_result(input);
+	return 0;
+}
+
+int read_nbr(int n){
+	printf("please enter a number :");
+	scanf("%d",&n);
+	return n;}
+	
+int fibonacci(int num){
+	if(num < 2)
+	  return num;
+	else 
+	  return fibonacci(num - 1)+fibonacci(num - 2);
+	}
+	
+void print_result(int x){
+	int i;
+	for(i = 0;i <= x;i++)
+	{
+		printf("%d\t",fibonacci(i));
+	}
+	}
