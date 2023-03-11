@@ -1,0 +1,27 @@
+#include <stdio.h>
+int read_nbr();
+int ProductDigit(int);
+void print_result(int);
+
+int main()
+{
+	int input = read_nbr();
+	int output = ProductDigit(input);
+	print_result(output);
+	return 0;
+}
+
+int read_nbr(int num){
+	printf("please enter a number:");
+	scanf("%d",&num);
+	return num;}
+	
+int ProductDigit(int n){
+	if(n < 10)
+	  return n;
+	else 
+	  return (n % 10)*ProductDigit(n / 10);
+	}
+	
+void print_result(int x){
+	printf("%d",x);}
