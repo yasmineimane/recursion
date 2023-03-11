@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+int binarytodecimal(int);
+int read_nbr();
+void print_result(int);
+
+int main()
+{
+	int input = read_nbr();
+	int output = binarytodecimal(input);
+	print_result(output);
+	return 0;
+}
+
+int read_nbr(int n){
+	printf("please enter a number :");
+	scanf("%d",&n);
+	return n;}
+	
+int binarytodecimal(int x){
+	if(x == 0)
+	  return 0;
+	else 
+	  return x %10 + binarytodecimal(x / 10)*2;
+	}
+	
+void print_result(int num){
+	printf("%d",num);}
