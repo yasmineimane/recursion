@@ -1,0 +1,27 @@
+#include <stdio.h>
+int read_nbr();
+int SumDigit(int);
+void print_result(int);
+
+int main()
+{
+	int input = read_nbr();
+	int output = SumDigit(input);
+	print_result(output);
+	return 0;
+}
+
+int read_nbr(int num){
+	printf("please enter a number :");
+	scanf("%d",&num);
+	return num;}
+	
+int SumDigit(int n){
+	if(n < 10)
+	  return n;
+	else 
+	  return (n % 10) + SumDigit(n / 10);
+	}
+	
+void print_result(int x){
+	printf("%d",x);}
