@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdbool.h>
+int read_nbr();
+bool onlyOddDigit(int);
+void print_result(int);
+
+int main()
+{
+	int input = read_nbr();
+	int output = onlyOddDigit(input);
+	print_result(output);
+	return 0;
+}
+
+int read_nbr(int num){
+	printf("please enter a number :");
+	scanf("%d",&num);
+	return num;}
+	
+bool onlyOddDigit(int n){
+	if(n < 10)
+	  return (n % 2 != 0);
+	else 
+	  return ((n % 10) % 2 != 0) && onlyOddDigit(n / 10);
+	}
+	
+void print_result(int x){
+	printf("%d",x);}
