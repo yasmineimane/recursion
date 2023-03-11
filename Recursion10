@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+int read_nbr();
+int IsItArmstrong(int);
+void print_result(int , int);
+
+int main()
+{
+	int input = read_nbr();
+	int output = IsItArmstrong(input);
+	print_result(input, output);
+	return 0;
+}
+
+int read_nbr(int num){	
+	printf("please enter a number :");
+	scanf("%d",&num);
+	return num;}
+	
+int IsItArmstrong(int n){
+	if(n < 10)
+	  return pow(n,3);
+	else 
+	  return pow((n % 10), 3) + IsItArmstrong(n/10);}
+	  
+void print_result(int x ,int y){
+	if(x == y)
+	{
+		printf("is armstrong");
+	}else
+	{
+		printf("is not armstrong");
+	}}
