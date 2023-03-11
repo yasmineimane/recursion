@@ -1,0 +1,32 @@
+#include <stdio.h>
+int evendigit(int);
+int read_nbr();
+void print_result(int);
+int main()
+{
+	int input = read_nbr();
+	int output = evendigit(input);
+	print_result(output);
+	return 0;
+}
+
+int read_nbr(int num){
+	printf("please enter a number :");
+	scanf("%d",&num);
+	return num;}
+	
+int evendigit(int n){
+	if(n < 10)
+	  return (n % 2 == 0);
+	else
+	  if((n % 10) % 2 == 0)
+	  {
+	  	return 1 + evendigit(n / 10);
+	  }else
+	  {
+	  	return evendigit(n / 10);
+	  }
+	  }
+	 
+void print_result(int x){
+	printf("%d",x);}
